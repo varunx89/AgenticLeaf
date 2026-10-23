@@ -18,10 +18,10 @@ class LatexParser {
     const fileStack = []
     let currentError = null
 
-    const fileOpenRegex = new RegExp('\\(([a-zA-Z0-9_/\.-]+\\.[a-zA-Z0-9]+)')
-    const lineNumRegex = new RegExp('^l\\.([0-9]+)\\s*(.*)')
-    const typesettingRegex = new RegExp('^(Overfull|Underfull)\\s+\\\\(hbox|vbox\\)\\s+(.*)')
-    const warningRegex = new RegExp('^(?:LaTeX|Package\\s+([a-zA-Z0-9_-]+)|Class\\s+([a-zA-Z0-9_-]+))\\s+Warning:\\s*(.*)')
+    const fileOpenRegex = /\(([a-zA-Z0-9_\/\.-]+\.[a-zA-Z0-9]+)/
+    const lineNumRegex = /^l\.([0-9]+)\s*(.*)/
+    const typesettingRegex = /^(Overfull|Underfull)\s+\\(hbox|vbox)\s+(.*)/
+    const warningRegex = /^(?:LaTeX|Package\s+([a-zA-Z0-9_-]+)|Class\s+([a-zA-Z0-9_-]+))\s+Warning:\s*(.*)/
 
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i]
