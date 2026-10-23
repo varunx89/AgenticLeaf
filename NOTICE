@@ -1,0 +1,16 @@
+AgenticLeaf
+Copyright (c) 2026 AgenticLeaf Contributors
+
+This product contains code, architectural patterns, and regex parsing logic
+derived from the Overleaf Community Edition (Common LaTeX Service Interface - CLSI
+and clsi-parsers).
+
+Upstream Overleaf:
+Copyright (c) 2014-2024 Overleaf (Digital Science / Overleaf Ltd)
+Licensed under the GNU Affero General Public License v3.0 (AGPL-3.0).
+Repository: https://github.com/overleaf/overleaf
+
+Components derived or adapted from Overleaf include:
+- LaTeX, BibTeX, and ChkTeX log parsing and diagnostics classification
+- CLSI REST compile request/response contract and output file endpoints
+- Path sanitization and secure compilation isolation
