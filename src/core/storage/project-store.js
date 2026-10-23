@@ -175,9 +175,15 @@ class ProjectStore {
     }
 
     // Commit in git
-    await this._git(projectDir, ['add', safePath])
+    await this._git(projectDir, ['add', safePath, path.join(projectDir, '.metadata.json')])
     const msg = commitMessage || `edit: update ${relPath}`
-    await this._git(projectDir, ['commit', '-m', msg])
+    try {
+      await this._git(projectDir, ['commit', '-m', msg])
+    } catch (err) {
+      if (!err.stdout || !err.stdout.includes('nothing to commit')) {
+        throw err
+      }
+    }
     return { success: true, path: relPath }
   }
 

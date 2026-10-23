@@ -1,0 +1,11 @@
+node_modules/
+data/
+output/
+*.pdf
+*.log
+*.aux
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+.DS_Store
