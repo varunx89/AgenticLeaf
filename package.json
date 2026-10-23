@@ -1,15 +1,18 @@
 {
   "name": "agenticleaf",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
+  "description": "Agent-first LaTeX editor and compilation engine based on Overleaf",
+  "main": "src/index.js",
+  "bin": {
+    "agenticleaf": "./bin/agenticleaf.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node bin/agenticleaf.js serve",
+    "serve": "node bin/agenticleaf.js serve",
+    "mcp": "node bin/agenticleaf.js mcp",
+    "test": "NODE_OPTIONS=\"-r /home/server/.local/lib/clean-exit.js\" node --test test/**/*.test.js",
+    "test:e2e": "NODE_OPTIONS=\"-r /home/server/.local/lib/clean-exit.js\" node test/verify-e2e.js"
   },
-  "keywords": [],
   "type": "commonjs",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.32.1",
