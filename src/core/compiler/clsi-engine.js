@@ -6,7 +6,9 @@ const { parseLogs } = require('../parsers')
 
 class CLSIEngine {
   constructor(options = {}) {
-    this.tectonicPath = options.tectonicPath || process.env.TECTONIC_PATH || '/home/server/.local/bin/tectonic'
+    const localTectonic = path.join(process.env.HOME || '', '.local/bin/tectonic')
+    const fallbackPath = fs.existsSync(localTectonic) ? localTectonic : 'tectonic'
+    this.tectonicPath = options.tectonicPath || process.env.TECTONIC_PATH || fallbackPath
     this.defaultTimeoutMs = options.defaultTimeoutMs || 60000
   }
 

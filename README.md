@@ -65,7 +65,8 @@
 
 ### Installation
 ```bash
-cd /home/server/Programming/AgenticLeaf
+git clone https://github.com/VarunChopra11/AgenticLeaf.git
+cd AgenticLeaf
 npm install
 ```
 
@@ -98,10 +99,8 @@ mcpServers:
   agenticleaf:
     command: "node"
     args:
-      - "/home/server/Programming/AgenticLeaf/bin/agenticleaf.js"
+      - "/path/to/AgenticLeaf/bin/agenticleaf.js"
       - "mcp"
-    env:
-      NODE_OPTIONS: "-r /home/server/.local/lib/clean-exit.js"
 ```
 
 ### Available MCP Tools

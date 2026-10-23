@@ -14,10 +14,8 @@ mcpServers:
   agenticleaf:
     command: "node"
     args:
-      - "/home/server/Programming/AgenticLeaf/bin/agenticleaf.js"
+      - "/path/to/AgenticLeaf/bin/agenticleaf.js"
       - "mcp"
-    env:
-      NODE_OPTIONS: "-r /home/server/.local/lib/clean-exit.js"
 ```
 
 ### Claude Desktop Configuration
@@ -28,10 +26,7 @@ Add to `claude_desktop_config.json`:
   "mcpServers": {
     "agenticleaf": {
       "command": "node",
-      "args": ["/home/server/Programming/AgenticLeaf/bin/agenticleaf.js", "mcp"],
-      "env": {
-        "NODE_OPTIONS": "-r /home/server/.local/lib/clean-exit.js"
-      }
+      "args": ["/path/to/AgenticLeaf/bin/agenticleaf.js", "mcp"]
     }
   }
 }

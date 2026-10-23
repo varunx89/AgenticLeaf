@@ -9,3 +9,10 @@ output/
 *.fls
 *.fdb_latexmk
 .DS_Store
+.env
+.env.*
+*.env
+*.local
+.cache/
+*.zip
+*.tar.gz
